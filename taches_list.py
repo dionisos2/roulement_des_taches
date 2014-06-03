@@ -4,11 +4,26 @@ import xml
 from xml.dom import minidom
 
 class Taches_list:
-    def __init__(self, list_of_taches = []):
+    def __init__(self, list_of_taches):
         self.list_of_taches = list_of_taches
 
+    def have(self, tache):
+        for tache2 in self.list_of_taches:
+            if(tache.numero == tache2.numero):
+                return True
+        return False
+
+    def have_one_in(self, taches_list):
+        assert(isinstance(taches_list, Taches_list))
+        have = False
+        for tache in taches_list:
+            have = have or self.have(tache)
+        return have
+
     def total_time(self):
-        return sum((tache.get_time() for tache in self.list_of_taches))
+        the_sum = sum((tache.get_time() for tache in self.list_of_taches))
+
+        return the_sum
 
     def append(self, tache):
         assert(isinstance(tache, Tache))
@@ -20,11 +35,11 @@ class Taches_list:
 
     def get_tache_for_week(self):
         is_week = lambda tache:(tache.frequence[1] != "mois")
-        return Taches_list(filter(is_week, self.list_of_taches))
+        return Taches_list(list(filter(is_week, self.list_of_taches)))
 
     def get_tache_for_month(self):
         is_week = lambda tache:(tache.frequence[1] == "mois")
-        return Taches_list(filter(is_week, self.list_of_taches))
+        return Taches_list(list(filter(is_week, self.list_of_taches)))
 
     @classmethod
     def get_element(cls, tache_node, element):
@@ -88,7 +103,7 @@ class Taches_list:
                 regrouped_taches[i] = Taches_list([tache])
                 i += 1
             else:
-                if(tache.groupe in self.regrouped_taches):
+                if(tache.groupe in regrouped_taches):
                     regrouped_taches[tache.groupe].append(tache)
                 else:
                     regrouped_taches[tache.groupe] = Taches_list([tache])
