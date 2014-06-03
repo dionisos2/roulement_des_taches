@@ -1,0 +1,275 @@
+<?xml version="1.0" ?>
+<taches>
+  <tache>
+	<numero>1</numero>
+	<nom>Poules (alimentation, œuf, eau)</nom>
+	<temps>25mins</temps>
+	<horaire>10h00</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>2</numero>
+	<nom>Faire vaisselle</nom>
+	<temps>25mins</temps>
+	<horaire>16h-20h</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>A</groupe>
+  </tache>
+  <tache>
+	<numero>3</numero>
+	<nom>Préparer repas(vérif frigo, mets, dressage)</nom>
+	<temps>1h30</temps>
+	<horaire>13h-15h</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>3</numero>
+	<nom>Préparer repas(vérif frigo, mets, dressage)</nom>
+	<temps>1h30</temps>
+	<horaire>13h-15h</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>B</groupe>
+  </tache>
+  <tache>
+	<numero>4</numero>
+	<nom>Balayer la cuisine</nom>
+	<temps>15mins</temps>
+	<horaire>mercredi/vendredi/dimanche</horaire>
+	<frequence>3/semaine</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>5</numero>
+	<nom>Laver la gazinière</nom>
+	<temps>20mins</temps>
+	<horaire>samedi</horaire>
+	<frequence>1/semaine</frequence>
+	<groupe>C</groupe>
+  </tache>
+  <tache>
+	<numero>6</numero>
+	<nom>Laver les toilettes du bas</nom>
+	<temps>15mins</temps>
+	<horaire>le 7 et le 22</horaire>
+	<frequence>2/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>6</numero>
+	<nom>Laver les toilettes du haut</nom>
+	<temps>15mins</temps>
+	<horaire>le 7 et le 22</horaire>
+	<frequence>2/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>7</numero>
+	<nom>Laver baignoire</nom>
+	<temps>15mins</temps>
+	<horaire>le 7 et le 22</horaire>
+	<frequence>2/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>8</numero>
+	<nom>Laver frigo</nom>
+	<temps>30mins</temps>
+	<horaire>le 7 et le 22</horaire>
+	<frequence>2/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>9</numero>
+	<nom>Laver les fours</nom>
+	<temps>50mins</temps>
+	<horaire>le 15</horaire>
+	<frequence>1/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>10</numero>
+	<nom>vider le compost(nettoyer seaux)</nom>
+	<temps>15mins</temps>
+	<horaire>19h-21h</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>D</groupe>
+  </tache>
+  <tache>
+	<numero>11</numero>
+	<nom>Laver les interrupteurs</nom>
+	<temps>15mins</temps>
+	<horaire>le 15</horaire>
+	<frequence>1/mois</frequence>
+	<groupe>C*</groupe>
+  </tache>
+  <tache>
+	<numero>12</numero>
+	<nom>Laver sol cuisine</nom>
+	<temps>20mins</temps>
+	<horaire>dimanche</horaire>
+	<frequence>1/semaine</frequence>
+	<groupe>C</groupe>
+  </tache>
+  <tache>
+	<numero>13</numero>
+	<nom>Laver égouttoir</nom>
+	<temps>20mins</temps>
+	<horaire>samedi</horaire>
+	<frequence>1/semaine</frequence>
+	<groupe>C</groupe>
+  </tache>
+  <tache>
+	<numero>14</numero>
+	<nom>Laver vitres cuisine</nom>
+	<temps>15mins</temps>
+	<horaire>le 15</horaire>
+	<frequence>1/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>15</numero>
+	<nom>Contrôles(fermeture porte, lumière, congélateur)</nom>
+	<temps>5mins</temps>
+	<horaire>après gastéro-chasse</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>E</groupe>
+  </tache>
+  <tache>
+	<numero>15</numero>
+	<nom>Contrôles(fermeture porte, lumière, congélateur)</nom>
+	<temps>5mins</temps>
+	<horaire>après gastéro-chasse</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>F</groupe>
+  </tache>
+  <tache>
+	<numero>17</numero>
+	<nom>Débarrasser table + mise au frais</nom>
+	<temps>15mins</temps>
+	<horaire>0-30mins après le repas</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>A</groupe>
+  </tache>
+  <tache>
+	<numero>18</numero>
+	<nom>Arroser jardin et verrière</nom>
+	<temps>40mins</temps>
+	<horaire>19h-21h</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>F</groupe>
+  </tache>
+  <tache>
+	<numero>19</numero>
+	<nom>Décongeler aliments(poules + repas)</nom>
+	<temps>5mins</temps>
+	<horaire>8h-10h</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>B</groupe>
+  </tache>
+  <tache>
+	<numero>20</numero>
+	<nom>Gastéro-chasse</nom>
+	<temps>20mins</temps>
+	<horaire>22h</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>E</groupe>
+  </tache>
+  <tache>
+	<numero>20</numero>
+	<nom>Gastéro-chasse</nom>
+	<temps>20mins</temps>
+	<horaire>22h</horaire>
+	<frequence>1/jour</frequence>
+	<groupe>F</groupe>
+  </tache>
+  <tache>
+	<numero>21</numero>
+	<nom>Freeganisme + courses</nom>
+	<temps>1h30</temps>
+	<horaire>mardi soir, jeudi soir, samedi soir, lundi mnumeroi</horaire>
+	<frequence>2/semaine</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>22</numero>
+	<nom>Nettoyer et trier aliments récupérés</nom>
+	<temps>1h00</temps>
+	<horaire>après le freeganisme</horaire>
+	<frequence>2/semaine</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>22</numero>
+	<nom>Nettoyer et trier aliments récupérés</nom>
+	<temps>1h00</temps>
+	<horaire>après le freeganisme</horaire>
+	<frequence>2/semaine</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>22</numero>
+	<nom>Nettoyer et trier aliments récupérés</nom>
+	<temps>1h00</temps>
+	<horaire>après le freeganisme</horaire>
+	<frequence>2/semaine</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>22</numero>
+	<nom>Nettoyer et trier aliments récupérés</nom>
+	<temps>1h00</temps>
+	<horaire>après le freeganisme</horaire>
+	<frequence>2/semaine</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>23</numero>
+	<nom>Faire pain</nom>
+	<temps>1h15</temps>
+	<horaire>mardi</horaire>
+	<frequence>1/semaine</frequence>
+	<groupe>G</groupe>
+  </tache>
+  <tache>
+	<numero>24</numero>
+	<nom>Couper pain et le mettre au congel</nom>
+	<temps>30mins</temps>
+	<horaire>mardi</horaire>
+	<frequence>1/semaine</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>25</numero>
+	<nom>Nourrir levain</nom>
+	<temps>15mins</temps>
+	<horaire>mercredi/vendredi/dimanche</horaire>
+	<frequence>3/semaine</frequence>
+	<groupe>G</groupe>
+  </tache>
+  <tache>
+	<numero>26</numero>
+	<nom>Nettoyer chez jr</nom>
+	<temps>40mins</temps>
+	<horaire>le 7 et le 22</horaire>
+	<frequence>2/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>26</numero>
+	<nom>Nettoyer chez jr</nom>
+	<temps>40mins</temps>
+	<horaire>le 7 et le 22</horaire>
+	<frequence>2/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>27</numero>
+	<nom>Nettoyer niche des poules</nom>
+	<temps>25mins</temps>
+	<horaire>le 7 et le 22</horaire>
+	<frequence>2/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+</taches>
