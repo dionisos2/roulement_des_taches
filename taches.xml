@@ -38,7 +38,7 @@
 	<temps>15mins</temps>
 	<horaire>mercredi/vendredi/dimanche</horaire>
 	<frequence>3/semaine</frequence>
-	<groupe>*</groupe>
+	<groupe>H</groupe>
   </tache>
   <tache>
 	<numero>5</numero>
@@ -51,14 +51,6 @@
   <tache>
 	<numero>6</numero>
 	<nom>Laver les toilettes du bas</nom>
-	<temps>15mins</temps>
-	<horaire>le 7 et le 22</horaire>
-	<frequence>2/mois</frequence>
-	<groupe>*</groupe>
-  </tache>
-  <tache>
-	<numero>6</numero>
-	<nom>Laver les toilettes du haut</nom>
 	<temps>15mins</temps>
 	<horaire>le 7 et le 22</horaire>
 	<frequence>2/mois</frequence>
@@ -110,7 +102,7 @@
 	<temps>20mins</temps>
 	<horaire>dimanche</horaire>
 	<frequence>1/semaine</frequence>
-	<groupe>C</groupe>
+	<groupe>H</groupe>
   </tache>
   <tache>
 	<numero>13</numero>
@@ -171,7 +163,7 @@
   <tache>
 	<numero>20</numero>
 	<nom>Gastéro-chasse</nom>
-	<temps>20mins</temps>
+	<temps>35mins</temps>
 	<horaire>22h</horaire>
 	<frequence>1/jour</frequence>
 	<groupe>E</groupe>
@@ -268,6 +260,22 @@
 	<numero>27</numero>
 	<nom>Nettoyer niche des poules</nom>
 	<temps>25mins</temps>
+	<horaire>le 7 et le 22</horaire>
+	<frequence>2/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>28</numero>
+	<nom>Laver les toilettes du haut</nom>
+	<temps>15mins</temps>
+	<horaire>le 7 et le 22</horaire>
+	<frequence>2/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>29</numero>
+	<nom>Nettoyer pour pain</nom>
+	<temps>20mins</temps>
 	<horaire>le 7 et le 22</horaire>
 	<frequence>2/mois</frequence>
 	<groupe>*</groupe>

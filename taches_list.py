@@ -4,8 +4,9 @@ import xml
 from xml.dom import minidom
 
 class Taches_list:
-    def __init__(self, list_of_taches):
+    def __init__(self, list_of_taches, name = ""):
         self.list_of_taches = list_of_taches
+        self.name = name
 
     def have(self, tache):
         for tache2 in self.list_of_taches:
@@ -117,24 +118,35 @@ class Taches_list:
         return tmp
 
     def wiki_table(self):
-        table = "\
-{| border=\"1\"\n\
-|+'''Activités'''\n\
+        if(self.name):
+            self.list_of_taches = sorted(self.list_of_taches, reverse=True, key=lambda tache:tache.frequence_by_day())
+        else:
+            self.list_of_taches = sorted(self.list_of_taches, reverse=False, key=lambda tache:tache.numero)
+
+        table = "{| border=\"1\" style=\"width:500px;\"\n"
+        if(self.name):
+            table += "|+'''"+self.name+"'''\n"
+        else:
+            table += "|+'''Activités'''\n"
+        table += "\
 !Numéro\n\
 !Nom\n\
 !Temps estimé\n\
 !Horaire\n\
-!Fréquence\n\
-!Groupe\n"
+!Fréquence\n"
+
+        if(not self.name):
+            table += "!Attribution\n"
 
         for tache in self.list_of_taches:
             table += "|-\n"
             table += "!" + str(tache.numero) + "\n"
             table += "|" + str(tache.nom) + "\n"
-            table += "|" + str(tache.temps) + "\n"
+            table += "|" + str(tache.temps) + "mins\n"
             table += "|" + str(tache.horaire) + "\n"
-            table += "|" + str(tache.frequence) + "\n"
-            table += "|" + str(tache.groupe) + "\n"
+            table += "|" + str(tache.frequence[0])+"/"+ str(tache.frequence[1]) + "\n"
+            if(not self.name):
+                table += "|" + str(tache.attribution) + "\n"
 
         table += "|}"
         return table

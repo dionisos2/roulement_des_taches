@@ -9,6 +9,7 @@ class Tache:
         self.horaire = horaire
         self.frequence = frequence
         self.groupe = groupe
+        self.attribution = None
 
     def __str__(self):
         tmp = "-"*10 + "tache" + "-"*10 + "\n"
