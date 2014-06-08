@@ -74,15 +74,15 @@
   </tache>
   <tache>
 	<numero>9</numero>
-	<nom>Laver les fours</nom>
-	<temps>50mins</temps>
+	<nom>Nettoyer le four électrique</nom>
+	<temps>30mins</temps>
 	<horaire>le 15</horaire>
 	<frequence>1/mois</frequence>
 	<groupe>*</groupe>
   </tache>
   <tache>
 	<numero>10</numero>
-	<nom>vider le compost(nettoyer seaux)</nom>
+	<nom>Vider le compost(nettoyer seaux)</nom>
 	<temps>15mins</temps>
 	<horaire>19h-21h</horaire>
 	<frequence>1/jour</frequence>
@@ -274,10 +274,26 @@
   </tache>
   <tache>
 	<numero>29</numero>
-	<nom>Nettoyer pour pain</nom>
-	<temps>20mins</temps>
+	<nom>Nettoyer huche à pain</nom>
+	<temps>25mins</temps>
 	<horaire>le 7 et le 22</horaire>
 	<frequence>2/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>30</numero>
+	<nom>Nettoyer micro-onde</nom>
+	<temps>30mins</temps>
+	<horaire>le 15</horaire>
+	<frequence>2/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>31</numero>
+	<nom>Nettoyer le four de la gazinière</nom>
+	<temps>40mins</temps>
+	<horaire>le 15</horaire>
+	<frequence>1/mois</frequence>
 	<groupe>*</groupe>
   </tache>
 </taches>
