@@ -67,7 +67,7 @@
   <tache>
 	<numero>8</numero>
 	<nom>Laver frigo</nom>
-	<temps>30mins</temps>
+	<temps>50mins</temps>
 	<horaire>le 7 et le 22</horaire>
 	<frequence>2/mois</frequence>
 	<groupe>*</groupe>
@@ -244,17 +244,17 @@
 	<numero>26</numero>
 	<nom>Nettoyer chez jr</nom>
 	<temps>40mins</temps>
-	<horaire>le 7 et le 22</horaire>
-	<frequence>2/mois</frequence>
-	<groupe>*</groupe>
+	<horaire>lundi</horaire>
+	<frequence>1/semaine</frequence>
+	<groupe>I</groupe>
   </tache>
   <tache>
 	<numero>26</numero>
 	<nom>Nettoyer chez jr</nom>
 	<temps>40mins</temps>
-	<horaire>le 7 et le 22</horaire>
-	<frequence>2/mois</frequence>
-	<groupe>*</groupe>
+	<horaire>lundi</horaire>
+	<frequence>1/semaine</frequence>
+	<groupe>J</groupe>
   </tache>
   <tache>
 	<numero>27</numero>
@@ -275,7 +275,7 @@
   <tache>
 	<numero>29</numero>
 	<nom>Nettoyer huche à pain</nom>
-	<temps>25mins</temps>
+	<temps>15mins</temps>
 	<horaire>le 7 et le 22</horaire>
 	<frequence>2/mois</frequence>
 	<groupe>*</groupe>
@@ -295,5 +295,45 @@
 	<horaire>le 15</horaire>
 	<frequence>1/mois</frequence>
 	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>32</numero>
+	<nom>Nettoyer grille pain</nom>
+	<temps>25mins</temps>
+	<horaire>le 20</horaire>
+	<frequence>1/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>33</numero>
+	<nom>Nettoyer robot mixeur</nom>
+	<temps>20mins</temps>
+	<horaire>le 17</horaire>
+	<frequence>1/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>34</numero>
+	<nom>Nettoyer torchons</nom>
+	<temps>30mins</temps>
+	<horaire>le 6</horaire>
+	<frequence>1/mois</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>35</numero>
+	<nom>passer le balai chez jr</nom>
+	<temps>20mins</temps>
+	<horaire>lundi et mercredi</horaire>
+	<frequence>2/semaine</frequence>
+	<groupe>I</groupe>
+  </tache>
+  <tache>
+	<numero>36</numero>
+	<nom>passer le balai chez jr</nom>
+	<temps>20mins</temps>
+	<horaire>lundi et mercredi</horaire>
+	<frequence>2/semaine</frequence>
+	<groupe>J</groupe>
   </tache>
 </taches>
