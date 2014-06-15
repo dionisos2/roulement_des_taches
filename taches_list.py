@@ -68,7 +68,7 @@ class Taches_list:
 
     @classmethod
     def str_to_temps(cls, temps):
-        cls.get_min = re.compile("(\d+)min") # à sortir de la fonction pour optimiser
+        cls.get_min = re.compile("(\d+) min") # à sortir de la fonction pour optimiser
         cls.get_hour = re.compile("(\d+)h(\d+)")
 
         minute = cls.get_min.match(temps)
@@ -130,19 +130,53 @@ class Taches_list:
     def sort(self, key = None, reverse = False):
         self.list_of_taches = sorted(self.list_of_taches, reverse = reverse, key = key)
 
-    def wiki_table(self):
+
+    def well_sort(self):
         if(self.name):
             self.list_of_taches = sorted(self.list_of_taches, reverse=True, key=lambda tache:tache.frequence_by_day())
         else:
-            self.list_of_taches = sorted(self.list_of_taches, reverse=False, key=lambda tache:tache.numero)
+            self.list_of_taches = sorted(self.list_of_taches, reverse=False, key=lambda tache:tache.nom)
+
+    def get_name(self):
+        if(self.name):
+            return self.name
+        else:
+            return "Activités"
+
+    def html_table(self):
+        self.well_sort()
+        table = "<table border=\"1\">\n"
+        table += "<caption><b>" + self.get_name() + "</b></caption>"
+        table += "<tr>\n\
+        <th>Nom</th>\n\
+        <th>Temps estimé</th>\n\
+        <th>Horaire</th>\n\
+        <th>Fréquence</th>"
+
+        if(not self.name):
+            table += "<th>Attribution</th>"
+
+        table += "</tr>"
+
+        for tache in self.list_of_taches:
+            table += "<tr>\n"
+            table += "<th>" + str(tache.nom) + "</th>\n"
+            table += "<th>" + str(tache.temps) + " min</th>\n"
+            table += "<th>" + str(tache.horaire) + "</th>\n"
+            table += "<th>" + str(tache.frequence[0]) + "/" + str(tache.frequence[1]) + "</th>\n"
+            if(not self.name):
+                table += "<th>" + str(tache.attribution) + "<th>\n"
+            table += "</tr>\n"
+        table += "</table>\n"
+
+        return table
+
+    def wiki_table(self):
+        self.well_sort()
 
         table = "{| border=\"1\" style=\"width:500px;\"\n"
-        if(self.name):
-            table += "|+'''"+self.name+"'''\n"
-        else:
-            table += "|+'''Activités'''\n"
+        table += "|+'''" + self.get_name() + "'''\n"
         table += "\
-!Numéro\n\
 !Nom\n\
 !Temps estimé\n\
 !Horaire\n\
@@ -153,9 +187,8 @@ class Taches_list:
 
         for tache in self.list_of_taches:
             table += "|-\n"
-            table += "!" + str(tache.numero) + "\n"
             table += "|" + str(tache.nom) + "\n"
-            table += "|" + str(tache.temps) + "mins\n"
+            table += "|" + str(tache.temps) + " min\n"
             table += "|" + str(tache.horaire) + "\n"
             table += "|" + str(tache.frequence[0])+"/"+ str(tache.frequence[1]) + "\n"
             if(not self.name):
