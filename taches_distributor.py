@@ -1,4 +1,5 @@
 from taches_list import *
+import copy
 
 class Taches_distributor:
     def __init__(self, taches_list):
@@ -12,12 +13,23 @@ class Taches_distributor:
         return result
 
     def global_distribution(self, distribution):
-        for tache in self.taches_list:
+        taches_list = copy.copy(self.taches_list)
+        for tache in taches_list:
             for person in (distribution["week"] + distribution["month"]):
                 if(tache in person):
                     tache.attribution = person.name
                     break
-        return self.taches_list
+
+        taches_list.sort(reverse=False, key=lambda tache:tache.numero)
+
+        i = 1
+        while (i < len(taches_list)):
+            if(taches_list[i-1].numero == taches_list[i].numero):
+                taches_list[i-1].attribution += " + " + taches_list[i].attribution
+                del(taches_list[i])
+            else:
+                i += 1
+        return taches_list
 
     def _share_in_(self, taches_list, n, names):
 

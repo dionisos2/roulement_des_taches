@@ -117,6 +117,19 @@ class Taches_list:
             tmp += str(tache)
         return tmp
 
+
+    def __getitem__(self, i):
+        return self.list_of_taches[i]
+
+    def __delitem__(self, i):
+        del(self.list_of_taches[i])
+
+    def __len__(self):
+        return len(self.list_of_taches)
+
+    def sort(self, key = None, reverse = False):
+        self.list_of_taches = sorted(self.list_of_taches, reverse = reverse, key = key)
+
     def wiki_table(self):
         if(self.name):
             self.list_of_taches = sorted(self.list_of_taches, reverse=True, key=lambda tache:tache.frequence_by_day())

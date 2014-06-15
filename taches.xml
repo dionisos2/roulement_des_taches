@@ -180,7 +180,7 @@
 	<numero>21</numero>
 	<nom>Freeganisme + courses</nom>
 	<temps>1h30</temps>
-	<horaire>mardi soir, jeudi soir, samedi soir, lundi mnumeroi</horaire>
+	<horaire>mardi soir, jeudi soir, samedi soir, lundi midi</horaire>
 	<frequence>2/semaine</frequence>
 	<groupe>*</groupe>
   </tache>
@@ -322,7 +322,7 @@
   </tache>
   <tache>
 	<numero>35</numero>
-	<nom>passer le balai chez jr</nom>
+	<nom>Passer le balai chez jr</nom>
 	<temps>20mins</temps>
 	<horaire>lundi et mercredi</horaire>
 	<frequence>2/semaine</frequence>
@@ -330,10 +330,34 @@
   </tache>
   <tache>
 	<numero>36</numero>
-	<nom>passer le balai chez jr</nom>
+	<nom>Passer le balai chez jr</nom>
 	<temps>20mins</temps>
 	<horaire>lundi et mercredi</horaire>
 	<frequence>2/semaine</frequence>
 	<groupe>J</groupe>
+  </tache>
+  <tache>
+	<numero>37</numero>
+	<nom>Balayer escalier jaune</nom>
+	<temps>8mins</temps>
+	<horaire>dimanche</horaire>
+	<frequence>1/semaine</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>38</numero>
+	<nom>Balayer escaliers rouges (+couloir entre les deux)</nom>
+	<temps>25mins</temps>
+	<horaire>dimanche</horaire>
+	<frequence>1/semaine</frequence>
+	<groupe>*</groupe>
+  </tache>
+  <tache>
+	<numero>39</numero>
+	<nom>Arroser orchidées</nom>
+	<temps>10mins</temps>
+	<horaire>dimanche</horaire>
+	<frequence>1/semaine</frequence>
+	<groupe>*</groupe>
   </tache>
 </taches>

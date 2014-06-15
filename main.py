@@ -7,7 +7,7 @@ taches_list.load_xml("./taches.xml")
 
 taches_distributor = Taches_distributor(taches_list)
 # print(taches_distributor.total_time())
-distribution = taches_distributor.share_in(4, ["A", "B", "C", "D"], ["A*", "B*", "C*", "D*"])
+distribution = taches_distributor.share_in(4, ["A", "B", "C", "D"], ["P", "Q", "R", "S"])
 
 print(distribution["global"].wiki_table())
 
