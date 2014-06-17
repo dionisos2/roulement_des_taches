@@ -209,14 +209,6 @@
 	<groupe>*</groupe>
   </tache>
   <tache>
-	<numero>22</numero>
-	<nom>Nettoyer et trier aliments récupérés</nom>
-	<temps>1h00</temps>
-	<horaire>après le freeganisme</horaire>
-	<frequence>2/semaine</frequence>
-	<groupe>*</groupe>
-  </tache>
-  <tache>
 	<numero>23</numero>
 	<nom>Faire pain</nom>
 	<temps>1h15</temps>

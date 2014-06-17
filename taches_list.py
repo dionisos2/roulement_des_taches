@@ -160,12 +160,12 @@ class Taches_list:
 
         for tache in self.list_of_taches:
             table += "<tr>\n"
-            table += "<th>" + str(tache.nom) + "</th>\n"
-            table += "<th>" + str(tache.temps) + " min</th>\n"
-            table += "<th>" + str(tache.horaire) + "</th>\n"
-            table += "<th>" + str(tache.frequence[0]) + "/" + str(tache.frequence[1]) + "</th>\n"
+            table += "<td>" + str(tache.nom) + "</td>\n"
+            table += "<td>" + str(tache.temps) + " min</td>\n"
+            table += "<td>" + str(tache.horaire) + "</td>\n"
+            table += "<td>" + str(tache.frequence[0]) + "/" + str(tache.frequence[1]) + "</td>\n"
             if(not self.name):
-                table += "<th>" + str(tache.attribution) + "<th>\n"
+                table += "<td>" + str(tache.attribution) + "<td>\n"
             table += "</tr>\n"
         table += "</table>\n"
 
