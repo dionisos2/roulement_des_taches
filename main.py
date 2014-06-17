@@ -41,3 +41,5 @@ html += "</body>\n\
 
 html_file = open("html_file.html", 'w', encoding='utf8')
 html_file.write(html)
+
+distribution["global"].save_xml("xml_file.xml")

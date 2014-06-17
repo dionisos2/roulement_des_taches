@@ -79,7 +79,46 @@ class Taches_list:
         elif(hour):
             return int(hour.group(1))*60 + int(hour.group(2))
         else:
-            raise ValueError("parse_temps, unable to parse: " + temps)
+            raise ValueError("str_to_temps, unable to parse: " + temps)
+
+    @classmethod
+    def str_to_groups(cls, str_groups):
+        cls.get_group = re.compile("(?:([^ +]*)(?: \+ )?)(.*)") #TOSEE pas top …
+
+        group = cls.get_group.match(str_groups).groups()
+        groups = [group[0]]
+        while group[1] != "":
+            str_groups = group[1]
+            group = cls.get_group.match(str_groups).groups()
+            groups.append(group[0])
+
+        return groups
+
+    def save_xml(self, xml_file):
+        self.list_of_taches = sorted(self.list_of_taches, key=lambda tache:int(tache.numero))
+
+        xml = "<?xml version=\"1.0\" ?>\n\
+<taches>\n"
+
+        for tache in self.list_of_taches:
+            groups = self.str_to_groups(tache.attribution)
+            for group in groups:
+                tache_xml = "<tache>\n"
+                tache_xml += "<numero>" + str(tache.numero) + "</numero>\n"
+                tache_xml += "<nom>" + str(tache.nom) + "</nom>\n"
+                tache_xml += "<temps>" + str(tache.temps) + " min</temps>\n"
+                tache_xml += "<horaire>" + str(tache.horaire) + "</horaire>\n"
+                tache_xml += "<frequence>" + str(tache.frequence[0])+"/"+ str(tache.frequence[1]) + "</frequence>\n"
+                tache_xml += "<groupe>" + str(tache.groupe) + "</groupe>\n"
+                if(not self.name):
+                    tache_xml += "<attribution>" + str(group) + "</attribution>\n"
+                tache_xml += "</tache>\n"
+                xml += tache_xml
+
+        xml += "</taches>"
+        xml_file = open(xml_file, 'w', encoding='utf8')
+        xml_file.write(xml)
+
 
     def load_xml(self, xml_file):
         doc = minidom.parse(xml_file)
