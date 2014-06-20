@@ -17,7 +17,13 @@ class Taches_distributor:
 
     def share_with_one_more(self, distribution):
         assert(isinstance(distribution, Distribution))
-        
+        people = distribution.get_week()
+        new_people = []
+
+        for person in people:
+            person.i = 20
+
+        print(distribution.get_week()[1].i)
 
     def global_distribution(self, distribution):
         taches_list = copy.copy(self.taches_list)
