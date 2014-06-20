@@ -10,12 +10,12 @@ taches_distributor = Taches_distributor(taches_list)
 distribution = taches_distributor.share_in(3, ["A", "B", "C"], ["P", "Q", "R"])
 
 wiki = "= Tableau global ="
-wiki += distribution["global"].wiki_table()
+wiki += distribution.get_whole().wiki_table()
 wiki += "= Tableaux de la semaine ="
-for person in distribution["week"]:
+for person in distribution.get_week():
     wiki += person.wiki_table()
 wiki += "= Tableaux du mois ="
-for person in distribution["month"]:
+for person in distribution.get_month():
     wiki += person.wiki_table()
 
 wiki_file = open("wiki_file", 'w', encoding='utf8')
@@ -31,10 +31,10 @@ tr    { page-break-inside:avoid; page-break-after:auto }\n\
 </style>\n\
 </head>\n\
 <body>"
-html += distribution["global"].html_table()
-for person in distribution["week"]:
+html += distribution.get_whole().html_table()
+for person in distribution.get_week():
     html += person.html_table()
-for person in distribution["month"]:
+for person in distribution.get_month():
     html += person.html_table()
 html += "</body>\n\
 </html>"
@@ -42,4 +42,4 @@ html += "</body>\n\
 html_file = open("html_file.html", 'w', encoding='utf8')
 html_file.write(html)
 
-distribution["global"].save_xml("xml_file.xml")
+distribution.get_whole().save_xml("xml_file.xml")

@@ -1,21 +1,28 @@
 from taches_list import *
+from distribution import Distribution
 import copy
 
 class Taches_distributor:
-    def __init__(self, taches_list):
+    def __init__(self, taches_list, max_diff = 0.05):
         assert(isinstance(taches_list, Taches_list))
         self.taches_list = taches_list
+        self.max_diff = max_diff #différence max de temps d’activité entre les personnes(pas tout à fait exacte)
 
     def share_in(self, n, week_names, month_names):
-        result = {"week": self._share_in_(self.taches_list.get_tache_for_week(), n, week_names),
-                  "month": self._share_in_(self.taches_list.get_tache_for_month(), n, month_names)}
-        result["global"] = self.global_distribution(result)
-        return result
+        distribution = Distribution()
+        distribution.set_week(self._share_in_(self.taches_list.get_tache_for_week(), n, week_names))
+        distribution.set_month(self._share_in_(self.taches_list.get_tache_for_month(), n, month_names))
+        distribution.set_whole(self.global_distribution(distribution))
+        return distribution
+
+    def share_with_one_more(self, distribution):
+        assert(isinstance(distribution, Distribution))
+        
 
     def global_distribution(self, distribution):
         taches_list = copy.copy(self.taches_list)
         for tache in taches_list:
-            for person in (distribution["week"] + distribution["month"]):
+            for person in (distribution.get_week() + distribution.get_month()):
                 if(tache in person):
                     tache.attribution = person.name
                     break
@@ -32,7 +39,6 @@ class Taches_distributor:
         return taches_list
 
     def _share_in_(self, taches_list, n, names):
-
         time_by_person = taches_list.total_time() / n
         regrouped_taches_list = taches_list.regroup_taches()
         people = []
@@ -52,6 +58,10 @@ class Taches_distributor:
 
             if(not ok):
                 raise ValueError("impossible de répartir convenablement")
+        for person in people:
+            print(person.total_time())
+            if((person.total_time() - time_by_person)/time_by_person > self.max_diff):
+                raise ValueError("Il y a une trop grande différence de temps dans la répartition, temps moyen:" + str(time_by_person) + " temps trouvé:" + str(person.total_time()))
 
         return people
 

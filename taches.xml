@@ -180,31 +180,7 @@
 	<numero>21</numero>
 	<nom>Freeganisme + courses</nom>
 	<temps>1h30</temps>
-	<horaire>mardi soir, jeudi soir, samedi soir, lundi midi</horaire>
-	<frequence>2/semaine</frequence>
-	<groupe>*</groupe>
-  </tache>
-  <tache>
-	<numero>22</numero>
-	<nom>Nettoyer et trier aliments récupérés</nom>
-	<temps>1h00</temps>
-	<horaire>après le freeganisme</horaire>
-	<frequence>2/semaine</frequence>
-	<groupe>*</groupe>
-  </tache>
-  <tache>
-	<numero>22</numero>
-	<nom>Nettoyer et trier aliments récupérés</nom>
-	<temps>1h00</temps>
-	<horaire>après le freeganisme</horaire>
-	<frequence>2/semaine</frequence>
-	<groupe>*</groupe>
-  </tache>
-  <tache>
-	<numero>22</numero>
-	<nom>Nettoyer et trier aliments récupérés</nom>
-	<temps>1h00</temps>
-	<horaire>après le freeganisme</horaire>
+	<horaire>aux occasions</horaire>
 	<frequence>2/semaine</frequence>
 	<groupe>*</groupe>
   </tache>
