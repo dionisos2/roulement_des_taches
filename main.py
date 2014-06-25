@@ -8,7 +8,10 @@ taches_list.load_xml("./taches.xml")
 taches_distributor = Taches_distributor(taches_list)
 # print(taches_distributor.total_time())
 distribution = taches_distributor.share_in(3, ["A", "B", "C"], ["P", "Q", "R"])
-taches_distributor.share_with_one_more("uaei")
+distribution = taches_distributor.share_with_one_more(distribution, "D")
+
+for person in distribution.get_week():
+    print(person.total_time())
 
 wiki = "= Tableau global ="
 wiki += distribution.get_whole().wiki_table()

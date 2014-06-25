@@ -1,6 +1,7 @@
 from taches_list import *
 from distribution import Distribution
 import copy
+import random
 
 class Taches_distributor:
     def __init__(self, taches_list, max_diff = 0.05):
@@ -15,15 +16,35 @@ class Taches_distributor:
         distribution.set_whole(self.global_distribution(distribution))
         return distribution
 
-    def share_with_one_more(self, distribution):
+    def share_with_one_more(self, distribution, name):
         assert(isinstance(distribution, Distribution))
+
+        for i in range(1000):
+            current_distribution = self.share_with_one_more_uncertain(distribution, name)
+            if self.is_valid(current_distribution.get_week()):
+                return current_distribution
+            else:
+                current_distribution = self.share_with_one_more_uncertain(distribution, name)
+
+        raise ValueError("Arf, raté")
+
+    def share_with_one_more_uncertain(self, distribution, name):
+        assert(isinstance(distribution, Distribution))
+        distribution = copy.copy(distribution)
+
         people = distribution.get_week()
-        new_people = []
+        people.append(Taches_list([], name))
 
-        for person in people:
-            person.i = 20
+        while(min(people, key = lambda person:person.total_time()) == people[-1]):
+            disadvantaged_person = max(people, key=lambda person: person.total_time())
+            key = random.randint(0, len(disadvantaged_person)-1)
+            tache = disadvantaged_person[key]
+            tache.attribution = name
+            people[-1].append(tache)
+            del disadvantaged_person[key]
 
-        print(distribution.get_week()[1].i)
+        return distribution
+
 
     def global_distribution(self, distribution):
         taches_list = copy.copy(self.taches_list)
@@ -64,12 +85,19 @@ class Taches_distributor:
 
             if(not ok):
                 raise ValueError("impossible de répartir convenablement")
-        for person in people:
-            print(person.total_time())
-            if((person.total_time() - time_by_person)/time_by_person > self.max_diff):
-                raise ValueError("Il y a une trop grande différence de temps dans la répartition, temps moyen:" + str(time_by_person) + " temps trouvé:" + str(person.total_time()))
+        if(not self.is_valid(people)):
+            raise ValueError("Il y a une trop grande différence de temps dans la répartition, temps moyen:" + str(time_by_person) + " temps trouvé:" + str(person.total_time()))
 
         return people
+
+    def is_valid(self, people):
+        sum_time = sum((person.total_time() for person in people))
+        time_by_person = sum_time / len(people)
+
+        for person in people:
+            if((person.total_time() - time_by_person)/time_by_person > self.max_diff):
+                return False
+        return True
 
     def total_time(self):
         return self.taches_list.total_time()

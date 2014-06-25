@@ -19,6 +19,7 @@ class Tache:
         tmp += "horaire: " + str(self.horaire) + "\n"
         tmp += "frequence: " + str(self.frequence[0])+ "/" + str(self.frequence[1]) + "\n"
         tmp += "groupe: " + str(self.groupe) + "\n"
+        tmp += "attribution: " + str(self.attribution) + "\n"
         return tmp
 
     def frequence_by_day(self):
