@@ -8,13 +8,13 @@ taches_list.load_xml("./taches.xml")
 taches_distributor = Taches_distributor(taches_list)
 # print(taches_distributor.total_time())
 distribution = taches_distributor.share_in(3, ["A", "B", "C"], ["P", "Q", "R"])
-distribution = taches_distributor.share_with_one_more(distribution, "D")
+# distribution = taches_distributor.share_with_one_less(distribution)
 
 for person in distribution.get_week():
     print(person.total_time())
 
 wiki = "= Tableau global ="
-wiki += distribution.get_whole().wiki_table()
+wiki += distribution.get_whole_without_duplicate().wiki_table()
 wiki += "= Tableaux de la semaine ="
 for person in distribution.get_week():
     wiki += person.wiki_table()
@@ -35,7 +35,7 @@ tr    { page-break-inside:avoid; page-break-after:auto }\n\
 </style>\n\
 </head>\n\
 <body>"
-html += distribution.get_whole().html_table()
+html += distribution.get_whole_without_duplicate().html_table()
 for person in distribution.get_week():
     html += person.html_table()
 for person in distribution.get_month():
