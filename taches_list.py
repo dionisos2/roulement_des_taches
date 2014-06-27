@@ -21,9 +21,11 @@ class Taches_list:
             have = have or self.have(tache)
         return have
 
-    def total_time(self):
-        the_sum = sum((tache.get_time() for tache in self.list_of_taches))
-
+    def total_time(self, n=None):
+        if(n == None):
+            the_sum = sum((tache.get_time() for tache in self.list_of_taches))
+        else:
+            the_sum = sum((tache.get_time() for tache in filter(lambda tache: (tache.for_x_people >= n), self.list_of_taches)))
         return the_sum
 
     def append(self, tache):
@@ -172,7 +174,8 @@ class Taches_list:
 
     def well_sort(self):
         if(self.name):
-            self.list_of_taches = sorted(self.list_of_taches, reverse=True, key=lambda tache:tache.frequence_by_day())
+            self.list_of_taches.sort(reverse = True)
+            # self.list_of_taches = sorted(self.list_of_taches, reverse=True, key=lambda tache:tache.frequence_by_day())
         else:
             self.list_of_taches = sorted(self.list_of_taches, reverse=False, key=lambda tache:tache.nom)
 
@@ -187,6 +190,7 @@ class Taches_list:
         table = "<table border=\"1\">\n"
         table += "<caption><b>" + self.get_name() + "</b></caption>"
         table += "<tr>\n\
+        <th>Effectif</th>\n\
         <th>Nom</th>\n\
         <th>Temps estimé</th>\n\
         <th>Horaire</th>\n\
@@ -199,6 +203,7 @@ class Taches_list:
 
         for tache in self.list_of_taches:
             table += "<tr>\n"
+            table += "<td>" + str(tache.for_x_people) + "</td>\n"
             table += "<td>" + str(tache.nom) + "</td>\n"
             table += "<td>" + str(tache.temps) + " min</td>\n"
             table += "<td>" + str(tache.horaire) + "</td>\n"

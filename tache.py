@@ -10,6 +10,7 @@ class Tache:
         self.frequence = frequence
         self.groupe = groupe
         self.attribution = None
+        self.for_x_people = None
 
     def __str__(self):
         tmp = "-"*10 + "tache" + "-"*10 + "\n"
@@ -33,3 +34,15 @@ class Tache:
 
     def get_time(self):
         return self.temps * self.frequence_by_day()
+
+    def __lt__(self, other):
+        return (self.for_x_people < other.for_x_people) or ((self.for_x_people == self.for_x_people) and (self.frequence_by_day() < other.frequence_by_day()))
+
+    def __eq__(self, other):
+        eq = (self.numero == other.numero)
+        eq &= (self.nom == other.nom)
+        eq &= (self.temps == other.temps)
+        eq &= (self.horaire == other.horaire)
+        eq &= (self.frequence == other.frequence)
+        eq &= (self.groupe == other.groupe)
+        return eq
