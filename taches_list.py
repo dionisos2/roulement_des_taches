@@ -201,9 +201,26 @@ class Taches_list:
 
         table += "</tr>"
 
+        for_x_people = self.list_of_taches[0].for_x_people
+        rowspan = [0]
+
+        for tache in self.list_of_taches:
+            if(for_x_people != tache.for_x_people):
+                rowspan.append(1)
+                for_x_people = tache.for_x_people
+            else:
+                rowspan[-1] += 1
+
+        current_rowspan = 0
+        count = 0
         for tache in self.list_of_taches:
             table += "<tr>\n"
-            table += "<td>" + str(tache.for_x_people) + "</td>\n"
+            if(count == 0):
+                table += "<td rowspan=\""+ str(rowspan[current_rowspan]) +"\">" + str(tache.for_x_people) + "</td>\n"
+                count = rowspan[current_rowspan] - 1
+                current_rowspan += 1
+            else:
+                count -= 1
             table += "<td>" + str(tache.nom) + "</td>\n"
             table += "<td>" + str(tache.temps) + " min</td>\n"
             table += "<td>" + str(tache.horaire) + "</td>\n"

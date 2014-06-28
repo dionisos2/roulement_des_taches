@@ -31,9 +31,9 @@ html = "<html>\n\
 <head>\n\
 <meta charset=\"UTF-8\" />\n\
 <style type=\"text/css\">\n\
-table { page-break-inside:auto }\n\
+table { page-break-inside:avoid }\n\
 tr    { page-break-inside:avoid; page-break-after:auto }\n\
-* {font-size:8px}\n\
+* {font-size:15px}\n\
 </style>\n\
 </head>\n\
 <body>"

@@ -213,16 +213,8 @@
 	<nom>Nettoyer chez jr</nom>
 	<temps>40 min</temps>
 	<horaire>lundi</horaire>
-	<frequence>1/semaine</frequence>
+	<frequence>2/semaine</frequence>
 	<groupe>I</groupe>
-  </tache>
-  <tache>
-	<numero>26</numero>
-	<nom>Nettoyer chez jr</nom>
-	<temps>40 min</temps>
-	<horaire>lundi</horaire>
-	<frequence>1/semaine</frequence>
-	<groupe>J</groupe>
   </tache>
   <tache>
 	<numero>27</numero>
@@ -287,22 +279,6 @@
 	<horaire>le 6</horaire>
 	<frequence>1/mois</frequence>
 	<groupe>*</groupe>
-  </tache>
-  <tache>
-	<numero>35</numero>
-	<nom>Passer le balai chez jr</nom>
-	<temps>20 min</temps>
-	<horaire>lundi et mercredi</horaire>
-	<frequence>2/semaine</frequence>
-	<groupe>I</groupe>
-  </tache>
-  <tache>
-	<numero>35</numero>
-	<nom>Passer le balai chez jr</nom>
-	<temps>20 min</temps>
-	<horaire>lundi et mercredi</horaire>
-	<frequence>2/semaine</frequence>
-	<groupe>J</groupe>
   </tache>
   <tache>
 	<numero>37</numero>
